@@ -1,17 +1,216 @@
-# This is a sample Python script.
+import turtle as tr
+import math
+    tr.setup(1200,700)
+    tr.speed(1000)
+    def triangle(a, c,s):
+    tr.color(c)
+    tr.begin_fill()
+    tr.left(a)
+    tr.forward(s)
+    tr.left(135)
+    s2 = (math.sqrt(s**2/2)) #small side of a triangle
+    tr.forward(s2)
+    tr.left(90)
+    tr.forward(s2)
+    tr.left(135)
+    tr.right(a)
+    tr.end_fill()
+    tr.color('white')
+    tr.width(1.5)
+    tr.left(a)
+    tr.forward(s)
+    tr.left(135)
+    tr.forward(s2)
+    tr.left(90)
+    tr.forward(s2)
+    tr.left(135)
+    tr.width(1)
+    tr.right(a)
+    tr.up()
+    tr.goto(0,0)
+    tr.down()
+    tr.color('black')
+pass
+'''
+Paints mainly used colored triangle, where a is angle of its
+rotation, c is its colour, s is the bigest side of triangle
+'''
+def square(a,c):
+    tr.color('orange')
+    tr.begin_fill()
+    tr.left(c)
+    tr.forward(a)
+    tr.left(90)
+    tr.forward(a)
+    tr.left(90)
+    tr.forward(a)
+    tr.left(90)
+    tr.forward(a)
+    tr.left(90)
+    tr.right(c)
+    tr.end_fill()
+    tr.color('white')
+    tr.width(1.5)
+    tr.left(c)
+    tr.forward(a)
+    tr.left(90)
+    tr.forward(a)
+    tr.left(90)
+    tr.forward(a)
+    tr.left(90)
+    tr.forward(a)
+    tr.left(90)
+    tr.right(c)
+    tr.width(1)
+    tr.up()
+    tr.goto(0, 0)
+    tr.down()
+    tr.color('black')
+pass
+'''
+Paints orange square, where c is angle of its rotation, and a is
+its side
+'''
+def parallelogram(b1,b2,a):
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+    tr.color('green')
+    tr.left(a)
+    tr.begin_fill()
+    tr.forward(b1) #big side
+    tr.left(45)
+    tr.forward(b2) #small side
+    tr.left(135)
+    tr.forward(b1)
+    tr.left(45)
+    tr.forward(b2)
+    tr.left(135)
+    tr.end_fill()
+    tr.color('white')
+    tr.width(1.5)
+    tr.forward(b1)
+    tr.left(45)
+    tr.forward(b2)
+    tr.left(135)
+    tr.forward(b1)
+    tr.left(45)
+    tr.forward(b2)
+    tr.left(135)
+    tr.right(a)
+    tr.up()
+    tr.goto(0, 0)
+    tr.down()
+    tr.color('black')
+pass
+'''
+Paints parallelogram, where b1 is its big side, b2 is its small side,
+a is the angle of its rotation
+'''
 
+# painting a main figure
+tr.goto(100, 100)
+triangle(180, 'red', 200)
+# 1 triangle
+square(70.71067811865475, 315)
+# square
+tr.up()
+tr.goto(100, 0)
+tr.down()
+triangle(90, 'purple', 100)
+# 2 triangle
+tr.up()
+tr.goto(101, 0)
+tr.down()
+triangle(225, 'cyan', 142.4213562373095)
+# 3 triangle
+tr.up()
+tr.goto(-50, -50)
+tr.down()
+triangle(0, 'pink', 100)
+# 4 triangle
+tr.up()
+tr.goto(-100, -100)
+tr.down()
+parallelogram(100, 69, 0)
+# parallerogram
+tr.up()
+tr.goto(-100, 100)
+tr.down()
+# 5 triangle
+triangle(270, 'yellow', 200)
+# Main figure is done
+#Painting a rocket
+tr.up()
+tr.goto(200, -140)
+tr.down()
+triangle(0, 'pink', 40) #1 triangle
+tr.up()
+tr.goto(200,-140)
+tr.down()
+triangle(315,'cyan', 56.5685424949238) #2 triangle
+tr.up()
+tr.goto(200, -140)
+tr.down()
+triangle(270,'yellow', 80) #3 triangle
+tr.up()
+tr.goto(240, -260)
+tr.down()
+triangle(90, 'red', 80) #4 triangle
+tr.up()
+tr.goto(200,-220 )
+square(28.2842712474619, 225) #square
+tr.up()
+tr.goto(180,-240)
+tr.down()
+triangle(270, 'purple', 40.5) #5 triangle
+tr.up()
+tr.goto(240, -220)
+tr.down()
+parallelogram(40, 28.2842712474619, 270) #parallelogram
+#rocket is done
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
-#cerf vbyfr
+# Helicopter
+tr.speed(100)
+tr.up()
+tr.goto(-30,-140)
+tr.down()
+triangle(0, "cyan",60)
+tr.up()
+tr.goto(30,-139)
+parallelogram(50,30,0)
+tr.up()
+tr.goto(30, -141)
+triangle(270, "red", 100)
+tr.up()
+tr.goto(27,-241)
+triangle(90, "yellow", 100)
+tr.up()
+tr.goto(-51,-218)
+triangle(0,"purple", 50)
+tr.up()
+tr.goto(-30,-192)
+triangle(180, "pink", 50)
+tr.up()
+tr.goto(-90, -202)
+square(45, 45)
+# Boat
+tr.up()
+tr.goto(-172,-140)
+triangle(135,'purple',40)
+tr.up()
+tr.goto(-200,-140)
+triangle(270,'red',100)
+tr.up()
+tr.goto(-198,-240)
+triangle(0,'pink',50)
+tr.up()
+tr.goto(-148, -190)
+square(34, 225)
+tr.up()
+tr.goto(-202,-165)
+triangle(225,'yellow',85)
+tr.up()
+tr.goto(-150,-242)
+triangle(180,"cyan",90)
+tr.up()
+tr.goto(-200,-287)
+parallelogram(62,35,135)
