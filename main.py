@@ -105,6 +105,69 @@ pass
 Paints parallelogram, where b1 is its big side, b2 is its small side,
 a is the angle of its rotation
 '''
+
+# painting a main figure
+tr.goto(100, 100)
+triangle(180, 'red', 200)
+# 1 triangle
+square(70.71067811865475, 315)
+# square
+tr.up()
+tr.goto(100, 0)
+tr.down()
+triangle(90, 'purple', 100)
+# 2 triangle
+tr.up()
+tr.goto(101, 0)
+tr.down()
+triangle(225, 'cyan', 142.4213562373095)
+# 3 triangle
+tr.up()
+tr.goto(-50, -50)
+tr.down()
+triangle(0, 'pink', 100)
+# 4 triangle
+tr.up()
+tr.goto(-100, -100)
+tr.down()
+parallelogram(100, 69, 0)
+# parallerogram
+tr.up()
+tr.goto(-100, 100)
+tr.down()
+# 5 triangle
+triangle(270, 'yellow', 200)
+# Main figure is done
+#Painting a rocket
+tr.up()
+tr.goto(200, -140)
+tr.down()
+triangle(0, 'pink', 40) #1 triangle
+tr.up()
+tr.goto(200,-140)
+tr.down()
+triangle(315,'cyan', 56.5685424949238) #2 triangle
+tr.up()
+tr.goto(200, -140)
+tr.down()
+triangle(270,'yellow', 80) #3 triangle
+tr.up()
+tr.goto(240, -260)
+tr.down()
+triangle(90, 'red', 80) #4 triangle
+tr.up()
+tr.goto(200,-220 )
+square(28.2842712474619, 225) #square
+tr.up()
+tr.goto(180,-240)
+tr.down()
+triangle(270, 'purple', 40.5) #5 triangle
+tr.up()
+tr.goto(240, -220)
+tr.down()
+parallelogram(40, 28.2842712474619, 270) #parallelogram
+#rocket is done
+
 # Helicopter
 tr.speed(100)
 tr.up()
