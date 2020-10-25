@@ -1,3 +1,11 @@
+# Case-study №1
+# Developers: Kondrashov M. (60%)
+# Bikmetov E. (35%)
+# Bychkov K. (25%)
+# To do:
+# #Kirill: 2 humans
+# Max: Defs, main figure, rocket
+# #Ed:Boat, Helicopter
 import turtle as tr
 import math
     tr.setup(1200,700)
@@ -223,7 +231,6 @@ tr.up()
 tr.goto(-170 - 20, -8 * 1.33)
 tr.down()
 triangle(45, 'red', 80)
-
 tr.up()
 tr.goto(-170 - 20, 35 * 1.4)
 tr.down()
