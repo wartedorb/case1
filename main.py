@@ -8,9 +8,9 @@
 # #Ed:Boat, Helicopter
 import turtle as tr
 import math
-    tr.setup(1200,700)
-    tr.speed(1000)
-    def triangle(a, c,s):
+tr.setup(1200,700)
+tr.speed(1000)
+def triangle(a, c,s):
     tr.color(c)
     tr.begin_fill()
     tr.left(a)
